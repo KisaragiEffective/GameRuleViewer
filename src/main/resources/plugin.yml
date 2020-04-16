@@ -1,0 +1,17 @@
+name: ${project.name}
+version: ${project.version}
+main: com.github.kisaragieffective.gameruleviewer.GameRuleViewer
+api-version: "1.13"
+
+commands:
+  gamerule-list:
+    permission: gameruleviewer.list
+
+permissions:
+  gameruleviewer.*:
+    description: grant all permission
+    children:
+      gameruleviewer.list: true
+  gameruleviewer.list:
+    description: /gamerule-list permission
+    default: false
